@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="navbar">
+	<h2 > CCR &nbsp;  </h2>
+	<p>Credit Card Request</p>
+</div >
+<div class=container>
+	<div class="leftbar"> 
+		<ul>
+			<li><a href="#">Visa</a></li>
+			<li><a href="#">Master Card</a></li>
+			<li><a href="#">American Expres</a></li>
+		</ul>
+	</div>
+	<div>
+	<form action="/action_page.php">
+		First Name: <input type="text" name="FirstName" value=""><br>
+		Last Name: <input type="text" name="LastName" value=""><br>
+		<div class=select>
+
+			birthday:<p>Month</p><select id=birthdaymonth></select>
+			<p>Day</p><select id=birthdayday></select>
+			<p>Year</p><select id=birthdayyear></select><br>
+		</div>
+		Address: <input type="text" name="Address" value=""><br>
+		Phone Number: <input type="text" name="Phone Number" value=""><br>
+		Company Name: <input type="text" name="Company Name" value=""><br>
+		Salary per Month:<input type="text" name="Salary per Month " value=""><br>
+		Senioriti in the Company:<input type="text" name="Senioriti in the Company" value=""><br>
+		Contact Number:<input type="text" name="Contact Number" value=""><br>
+	
+
+
+
+		<input type="submit" value="Submit">
+	</form>
+
+		
+	</div>
+</div>
+
+</body>
+<script type="text/javascript">
+	$( document ).ready(function() {
+	  	for ( i=1; i<=12;i++)
+		{
+			console.log(i)
+			$('#birthdaymonth').append('<option value="'+i+'">'+i+'</option>');
+		}
+	});
+		$( document ).ready(function() {
+	  	for ( i=1; i<=31;i++)
+		{
+			console.log(i)
+			$('#birthdayday').append('<option value="'+i+'">'+i+'</option>');
+		}
+	});
+		$( document ).ready(function() {
+	  	for ( i=1910; i<=2000;i++)
+		{
+			console.log(i)
+			$('#birthdayyear').append('<option value="'+i+'">'+i+'</option>');
+		}
+	});
+</script>
+</html>
+
